@@ -17,7 +17,27 @@ const User = database.define('Users',{
     },
     password_hash:{
         type: DataTypes.STRING
-    }
+    },
+    cpf:{
+        type: DataTypes.STRING,
+        allowNull: false
+    },
+    rg:{
+        type: DataTypes.STRING,
+        allowNull: false
+    },
+    sexo:{
+        type: DataTypes.STRING,
+        allowNull: false
+    },
+    nacionalidade:{
+        type: DataTypes.STRING,
+        allowNull: false
+    },
+    endereco:{
+        type: DataTypes.STRING,
+        allowNull: false
+    },
 },{
 
 })

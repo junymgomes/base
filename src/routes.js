@@ -3,6 +3,7 @@ import { Router, json } from "express"
 import ProdutoController from "./controllers/ProdutoController.js"
 import UserController from "./controllers/UserController.js"
 import SessionController from "./controllers/SessionController.js"
+import AnimalController from "./controllers/AnimalController.js"
 import authMiddlewars from "./middlewares/auth.js"
 
 const routes = new Router()
@@ -11,6 +12,9 @@ routes.use(json())
 
 routes.post('/user/create', UserController.addUser)
 routes.post('/user/login', SessionController.createSession)
+
+routes.post('/animal/add', AnimalController.addAnimal)
+routes.get('/animal/todos', AnimalController.getAnimal)
 
 routes.use(authMiddlewars)
 

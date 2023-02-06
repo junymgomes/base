@@ -3,7 +3,7 @@ import User from "../models/UserModel.js";
 class UserController{
   
   async addUser(req, res){
-    const { email } = req.body
+    const { email, cpf, rg, sexo, nacionalidade, endereco } = req.body
 
     const UserExists = await User.findOne({where: {email}})
 
@@ -15,7 +15,7 @@ class UserController{
 
     return res.json({
         id,
-        nome
+        nome, cpf, rg, sexo, nacionalidade, endereco
     })
   }
 }

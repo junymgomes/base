@@ -1,6 +1,6 @@
 import Sequelize from "sequelize"
 
-const sequelize = new Sequelize('aulanodejs', 'root', '', {
+const sequelize = new Sequelize('basenodejs', 'root', '', {
     host: 'localhost',
     dialect: 'mariadb'
   });
